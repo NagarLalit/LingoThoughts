@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+   <title>LingoThoughts</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="w3.css">
+   <link rel="stylesheet" href="w3-theme-teal.css">
+   <link rel="stylesheet" href="emailjs.css">
+   <link rel="stylesheet" href="font-awesome.min.css">
+   <script src="jquery-3.0.0.min.js"></script>
+   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+   <style>
+      .mySlides {
+      margin-left: auto;
+      margin-bottom : 30px;
+      margin-top : 30px;
+      display: block;
+      height : 400px;
+      width : 600px;
+      margin-right: auto;}
+	  
+	  .myNewSlides {
+      margin-left: auto;
+      margin-bottom : 30px;
+      margin-top : 30px;
+      display: block;
+      height : 400px;
+      width : 400px;
+      margin-right: auto;}
+   </style>
+   <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-55949164-2', 'auto');
+      ga('send', 'pageview');
+      
+   </script>
+   <script>// Accordions
+      function myAccFunc(id) {
+          var x = document.getElementById(id);
+          if (x.className.indexOf("w3-show") == -1) {
+              x.className += " w3-show";
+              x.previousElementSibling.className += " w3-dark-grey";
+          } else { 
+              x.className = x.className.replace(" w3-show", "");
+              x.previousElementSibling.className = 
+              x.previousElementSibling.className.replace(" w3-dark-grey", "");
+          }
+      	
+      	
+         $('html, body').animate({
+              scrollTop: $("#"+id).offset().top - 40
+          }, 2000);
+      
+      }
+      
+      
+      
+      function myAccScrollFunc(id) {
+          var x = document.getElementById(id);
+          if (x.className.indexOf("w3-show") == -1) {
+              x.className += " w3-show";
+              x.previousElementSibling.className += " w3-dark-grey";
+          } else { 
+              x.className = x.className.replace(" w3-show", "");
+              x.previousElementSibling.className = 
+              x.previousElementSibling.className.replace(" w3-dark-grey", "");
+          }
+      	
+      	
+      }
+   </script>
+   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+   <script type="text/javascript">
+      (function(){
+         emailjs.init("user_fggqEnlmRCxn1wOMoa7tu");
+      })();
+   </script>
+   <body>
+      <!-- Side Navigation -->
+      <!--    <nav class="w3-sidenav w3-white w3-card-2 w3-animate-left" style="display:none">
+         <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-xxxlarge w3-text-theme">Close ×</a>
+         <a href="javascript:void(0)">Link 1</a>		
+         <a href="javascript:void(0)">Link 2</a>		
+         <a href="javascript:void(0)">Link 3</a>		
+         <a href="javascript:void(0)">Link 4</a>		
+         <a href="javascript:void(0)">Link 5</a>		
+         </nav> -->
+      <!-- Header -->
+      <header class="w3-container w3-theme w3-padding" id="myHeader">
+         <!-- <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-opennav"></i> -->
+         <div class="w3-center">
+            <h1 class="w3-xxxlarge w3-animate-bottom">LingoThoughts </h1>
+            <h2 class="w3-xxlarge w3-animate-bottom">Foreign Language Institute</h2>
+            <h5>We Unite the World</h5>
+            <div class="w3-padding-32">
+               <div class="w3-row-padding w3-center w3-margin-top">
+               </div>
+            </div>
+         </div>
+      </header>
+      <!--     <ul class="w3-navbar w3-teal">
+         <li><a href="#" class="tablink" onclick="">Batches</a></li>
+          <li><a href="#" class="tablink" onclick="openCity(event, 'Paris');">Contact Us</a></li>
+          <li><a href="#" class="tablink" onclick="openCity(event, 'Tokyo');">About Us</a></li>
+         </ul> -->
+      <div class="w3-row w3-center w3-margin-top">
+         <div class="w3-third w3-white">
+            <div class="w3-card-2 w3-padding w3-margin-left w3-margin-right"  style="min-height:460px">
+               <div class="w3-display-container w3-white  " w3-card-8 w3-align-middle" style="height:200px;width:100%">
+                  <div class="w3-container w3-black" style="width:100%;height:33.33%">
+                     <p></p>
+                  </div>
+                  <div class="w3-container w3-red" style="width:100%;height:33.33%">
+                     <p></p>
+                  </div>
+                  <div class="w3-container w3-yellow" style="width:100%;height:33.33%">
+                     <p></p>
+                  </div>
+               </div>
+               <h2>GERMAN</h2>
+               <p class="w3-text-teal w3-large">Course Levels</p>
+               <button  onclick="myAccFunc('DemoGA1')" class="w3-btn  w3-large w3-margin-1 w3-border w3-border-white   w3-theme-dark w3-hover-teal">A1</button>
+               <button onclick="myAccFunc('DemoGA2')" class="w3-btn w3-border w3-border-white w3-large w3-margin-1  w3-theme-dark w3-hover-teal">A2</button>
+               <button  onclick="myAccFunc('DemoGB1')"class="w3-btn  w3-large w3-margin-1 w3-border w3-border-white   w3-theme-dark w3-hover-teal">B1</button>
+               <button  onclick="myAccFunc('DemoGB2')" class="w3-btn w3-border w3-border-white w3-large w3-margin-1  w3-theme-dark w3-hover-teal">B2</button>
+            </div>
+         </div>
+         <div class="w3-third w3-white">
+            <div class="w3-card-2 w3-padding w3-margin-left w3-margin-right" style="min-height:460px">
+               <div class="w3-display-container w3-white w3-card-8" style="height:200px;width:100 %">
+                  <div class="w3-container w3-white" style="width:100%;height:30%">
+                     <p></p>
+                  </div>
+                  <div class="w3-container w3-white" style="width:100%;height:40%"><span class="w3-badge w3-jumbo w3-red w3-text-red">66</span></div>
+                  <div class="w3-container w3-white" style="width:100%;height:30%">
+                     <p></p>
+                  </div>
+               </div>
+               <h2>JAPANESE</h2>
+               <p class="w3-text-teal w3-large">Course Levels</p>
+               <button onclick="myAccFunc('DemoJN5')" class="w3-btn  w3-large w3-margin-1 w3-border w3-border-white  w3-theme-dark w3-hover-teal">N5</button>
+               <button onclick="myAccFunc('DemoJN4')" class="w3-btn  w3-large w3-margin-1 w3-border w3-border-white w3-theme-dark w3-hover-teal">N4</button>
+            </div>
+         </div>
+         <div class="w3-third w3-white">
+            <div class="w3-card-2  w3-padding w3-margin-left w3-margin-right" style="min-height:460px">
+               <div class="w3-display-container w3-white w3-card-8" style="height:200px;width:95%">
+                  <div class="w3-display-topleft w3-container w3-blue" style="width:33%;height:100%">
+                     <p></p>
+                  </div>
+                  <div class="w3-display-topright w3-container w3-red" style="width:33%;height:100%">
+                     <p></p>
+                  </div>
+               </div>
+               <h2>FRENCH</h2>
+               <p class="w3-text-teal w3-large">Course Levels</p>
+               <button  onclick="myAccFunc('DemoFA1')" class="w3-btn  w3-large w3-margin-1 w3-border w3-border-white   w3-theme-dark w3-hover-teal">A1</button>
+               <button onclick="myAccFunc('DemoFA2')" class="w3-btn w3-border w3-border-white w3-large w3-margin-1  w3-theme-dark w3-hover-teal">A2</button>
+               <button  onclick="myAccFunc('DemoFB1')" class="w3-btn  w3-large w3-margin-1 w3-border w3-border-white   w3-theme-dark w3-hover-teal">B1</button>
+            </div>
+         </div>
+      </div>
+
+      <div id="lingoAbout" class="w3-container w3-teal">
+         <h3>Learning at LingoThougths...</h3>
+      </div>
+      <div class="wraptocenter">
+         <img class="mySlides" src="images/1.jpg">
+         <img class="mySlides" src="images/2.jpg">
+         <img class="mySlides" src="images/3.jpg">
+         <img class="mySlides" src="images/4.jpg">
+		 <img class="mySlides" src="images/5.jpg">
+		 <img class="mySlides" src="images/6.jpg">
+		 <img class="mySlides" src="images/7.jpg">
+
+         <script>
+            var slideIndex = 0;
+            carousel();
+            
+            function carousel() {
+             var i;
+             var x = document.getElementsByClassName("mySlides");
+             for (i = 0; i < x.length; i++) {
+               x[i].style.display = "none"; 
+             }
+             slideIndex++;
+             if (slideIndex > x.length) {slideIndex = 1} 
+             x[slideIndex-1].style.display = "block"; 
+             setTimeout(carousel, 4000); // Change image every 2 seconds
+            }
+         </script>
+      </div>
+      <div class="w3-container">
+         <h5  class="w3-text-grey w3-xlarge">We make you sit in circles, and that is how we can learn a language easily!!</h5>
+         <p  class="w3-text-grey w3-large">Sometimes, learning a language can swing your mood either way, but with our trainers and training center, we make it swing the right way.
+            "To have another language is to possess a second soul" - Charlemagne, we have given second a soul, even a third to over 500 students.
+            <b>Strength of one batch</b> is about <b>8 to 12 students</b> and this is only for better personal attention towards each soul.
+            Trainers are well qualified and have a great experience in teaching. We personally monitor and analyse each student's progress, and guide you for the important examinations and also conduct pre-tests. 
+         </p>
+      </div>
+	 
+      <div class="w3-container w3-teal">
+         <h3>Corporate Training at Industries & Colleges</h3>
+      </div>
+      <div>
+         <img class="myNewSlides" src="images/11.jpg">
+         <img class="myNewSlides" src="images/12.jpg">
+         <script>
+            var mSlideIndex = 0;
+            mCarousel();
+            
+            function mCarousel() {
+             var i;
+             var x = document.getElementsByClassName("myNewSlides");
+             for (i = 0; i < x.length; i++) {
+               x[i].style.display = "none"; 
+             }
+             mSlideIndex++;
+             if (mSlideIndex > x.length) {mSlideIndex = 1} 
+             x[mSlideIndex-1].style.display = "block"; 
+             setTimeout(mCarousel, 4000); // Change image every 2 seconds
+            }
+         </script>
+        
+      </div>
+      <div class="w3-container w3-xlarge">
+         <h5 class="w3-text-grey w3-xlarge">Quality training is what we deliver in a challenging environment.</h5>
+         <p  class="w3-text-grey w3-large">
+		    We are now affliated with many Engineering colleges, we train those students who are under time pressure & have lot of other books on to worry about.
+			In-Premise training helps a lot for these students, they can quickly add another skill to their box with an effort of one more lecture in their weekly timetable. 
+         </p>
+		          <p  class="w3-text-grey w3-large">
+				  We have also started our Corporate training recently. The first of them worked quite well and we had amazing feedback from the employees who wanted to learn basics of a Language in 3 weeks,
+				  We went to the premises and customised our syllabus so that, it could fit their purpose. 
+         </p>
+      </div>
+    
+      <div id="language_levels">
+         <div class="w3-container w3-theme-d4 w3-leftbar w3-border-aqua">
+            <p>German Language Levels</p>
+         </div>
+         <div class="w3-container w3-margin-bottom">
+            <div class="w3-accordion">
+               <button onclick="myAccFunc('DemoGA1')" class="w3-hover-dark-grey w3-teal w3-btn-block w3-left-align">A1</button>
+               <div id="DemoGA1" class="w3-accordion-content">
+                  <div class="w3-container">
+                     <p>The course students will be able to employ simple sentences and expressions when dealing with various situations in daily life (at the supermarket, in public offices, at the doctor's, at the office) and especially when expressing wishes and attending to personal needs in and around the university. Furthermore, they are able to talk about themselves and their areas of study and ask others about personal details, work, hobbies, and interests. Exercises become progressively more complex and generally train specific abilities like listening comprehension, speaking, reading comprehension, or writing. Classroom activities include individual and group work and are complemented by compulsory homework exercises. Short summaries of the material covered are provided at the end of each thematic unit.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="w3-accordion w3-margin-bottom">
+               <button onclick="myAccFunc('DemoGA2')" class="w3-hover-dark-grey w3-teal w3-btn-block w3-left-align">A2</button>
+               <div id="DemoGA2" class="w3-accordion-content">
+                  <div class="w3-container">
+                     <p>By the end of the course students will be able to
+                     <ul>
+                        <li> write letters, e-mails and text messages</li>
+                        <li>engage in and understand everyday discussions</li>
+                        <li>communicate in simple and routine situations by email and phone</li>
+                        <li>understand more complex forms of information</li>
+                        <li>express and defend their personal opinions</li>
+                     </ul>
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="w3-accordion">
+               <button onclick="myAccFunc('DemoGB1')" class="w3-hover-dark-grey w3-teal w3-btn-block w3-left-align">B1</button>
+               <div id="DemoGB1" class="w3-accordion-content">
+                  <div class="w3-container">
+                     <p>Understand the main issues if standard language is used clearly and if the conversation is about familiar aspects of work, school, leisure etc., you can manage most situations while travelling in a German-speaking country. Can give your opinion on familiar subjects and personal interest in a simple and coherent way. Relate experiences and events, describe dreams, hopes and goals and give short explanations regarding plans and opinions.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="w3-accordion ">
+               <button onclick="myAccFunc('DemoGB2')" class="w3-hover-dark-grey w3-teal w3-btn-block w3-left-align">B2</button>
+               <div id="DemoGB2" class="w3-accordion-content">
+                  <div class="w3-container">
+                     <p>Understand the main contents of complex texts on specific or abstract subjects and specialist discussions in your own field of knowledge, communicate so spontaneously and fluently that a normal conversation with native speakers is possible without great effort on both sides, express yourself on a broad range of topics in a clear and precise way, explain your point of view on a current issue and enumerate advantages and disadvantages of several possibilities.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="w3-container w3-theme-d4 w3-leftbar w3-border-aqua">
+            <p>Japanese Language Levels</p>
+         </div>
+         <div class="w3-container w3-margin-bottom">
+            <div class="w3-accordion">
+               <button onclick="myAccFunc('DemoJN5')" class="w3-hover-dark-grey w3-teal w3-btn-block w3-left-align">N5</button>
+               <div id="DemoJN5" class="w3-accordion-content">
+                  <div class="w3-container">
+                     <h6>Reading</h6>
+                     <p>One is able to read and understand typical expressions and sentences written in hiragana, katakana, and basic kanji.</p>
+                     <h6>Listening</h6>
+                     <p>One is able to listen and comprehend conversations about topics regularly encountered in daily life and classroom situations, and is able to pick up necessary information from short conversations spoken slowly..</p>
+                  </div>
+               </div>
+            </div>
+            <div class="w3-accordion ">
+               <button onclick="myAccFunc('DemoJN4')" class="w3-hover-dark-grey w3-teal w3-btn-block w3-left-align">N4</button>
+               <div id="DemoJN4" class="w3-accordion-content">
+                  <div class="w3-container">
+                     <h6>Reading</h6>
+                     <p>One is able to read and understand passages on familiar daily topics written in basic vocabulary and kanji.</p>
+                     <h6>Listening</h6>
+                     <p>One is able to listen and comprehend conversations encountered in daily life and generally follow their contents, provided that they are spoken slowly.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="w3-container w3-theme-d4 w3-leftbar w3-border-aqua">
+            <p>French Language Levels</p>
+         </div>
+         <div class="w3-container w3-margin-bottom">
+            <div class="w3-accordion">
+               <button onclick="myAccFunc('DemoFA1')" class="w3-hover-dark-grey w3-teal w3-btn-block w3-left-align">A1</button>
+               <div id="DemoFA1" class="w3-accordion-content">
+                  <div class="w3-container">
+                     <p>One can recognise and use familiar words and simple phrases for concrete purposes. Can introduce himself or someone else. Can ask and answer basic questions about home, family, surroundings, etc. Can communicate in a basic way when the other person speaks slowly and clearly, and is ready to repeat or reformulate to help communication.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="w3-accordion">
+               <button onclick="myAccFunc('DemoFA2')" class="w3-hover-dark-grey w3-teal w3-btn-block w3-left-align">A2</button>
+               <div id="DemoFA2" class="w3-accordion-content">
+                  <div class="w3-container">
+                     <p>One can understand isolated phrases and common expressions that relate to areas of high personal relevance (like personal or family information, shopping, immediate environment, work). Can communicate during easy or habitual tasks requiring a basic and direct information exchange on familiar subjects. Using simple words, can describe his or her surroundings and communicate immediate needs.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="w3-accordion w3-margin-bottom  w3-margin-top">
+               <div class="w3-accordion">
+                  <button onclick="myAccFunc('DemoFB1')" class="w3-hover-dark-grey w3-teal w3-btn-block w3-left-align">B1</button>
+                  <div id="DemoFB1" class="w3-accordion-content">
+                     <div class="w3-container">
+                        <p>Can understand the main points of clear standard speech on familiar subjects in work, school, leisure activities, etc. Can manage in most situations that come up when travelling in a region where the language is spoken. Can produce a simple and cohesive text on familiar subjects or subjects of personal interest. Can narrate an event, an experience or a dream; describe a desire or goal, and outline reasons or explanations behind a project or idea.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Container -->
+      <div class="w3-container w3-padding-64 w3-theme-l5">
+         <div class="w3-row">
+            <div class="w3-col m5">
+               <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us</span></div>
+               <h3>Address</h3>
+               <p>Hop in for an inquiry!</p>
+               <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Ravet</p>
+               <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +91-7709584260</p>
+               <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  kashmira.bafna@gmail.com</p>
+            </div>
+            <div class="w3-col m7">
+               <form id="myform" onsubmit="emailjs.sendForm('default_service', 'lingo_template_01', this); return false;" method="post">
+                  <label>Name</label>
+                  <input type="text" name="Name" />
+                  <label>Email</label>
+                  <input type="text" name="Email" />
+                  <label>Mobile</label>
+                  <input type="text" name="Mobile" />
+                  <label>Language</label>
+                  <input type="text" name="Language" />
+                  <br><br>
+                  <button>
+                  Send
+                  </button>
+               </form>
+               <!--      <form class="w3-container w3-card-4 w3-padding-16 w3-white">
+                  <div class="w3-group">      
+                    <label class="w3-label">Name</label>
+                    <input class="w3-input" type="text">
+                  </div>
+                  <div class="w3-group">      
+                    <label class="w3-label">Email</label>
+                    <input class="w3-input" type="text">
+                  </div>
+                  <div class="w3-group">      
+                    <label class="w3-label">Subject</label>
+                    <input class="w3-input" type="text">
+                  </div>  
+                  <input class="w3-check" type="checkbox" checked>
+                  <label class="w3-validate">I Like it!</label>
+                  <button type="button" class="w3-btn w3-right w3-theme">Send</button>
+                  </form> -->
+            </div>
+         </div>
+      </div>
+      <!-- Google Maps -->
+      <div id="googleMap" style="width:100%;height:420px;"></div>
+      <script src="http://maps.googleapis.com/maps/api/js"></script>
+      <script>
+         var myCenter = new google.maps.LatLng(18.643885714076184,73.75591775773434);
+         
+         function initialize() {
+         var mapProp = {
+           center:myCenter,
+           zoom:16,
+           scrollwheel:false,
+           draggable:false,
+           mapTypeId:google.maps.MapTypeId.ROADMAP
+           };
+         
+         var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+         
+         var marker = new google.maps.Marker({
+           position:myCenter,
+         });
+         
+         marker.setMap(map);
+         }
+         
+         google.maps.event.addDomListener(window, 'load', initialize);
+      </script>
+      <!-- Grid -->
+      <div class="w3-row-padding" style="margin:0 -16px">
+         <div class="w3-center w3-padding-64">
+            <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">REVIEWS</span>
+         </div>
+      </div>
+      <div class="w3-row-padding" style="margin:0 -16px">
+         <table class="w3-table">
+            <colgroup>
+               <col width="33.33%"/>
+               <col width="33.33%"/>
+               <col width="33.33%"/>
+            </colgroup>
+            <tr>
+               <th class="w3-center w3-padding-16">
+                  <h5>Krunal Sawkar </h5>
+                  <i class="star star-4"></i>
+                  <p class="w3-opacity">German - A1, A2</p>
+                  <p>I have been associated with this institute for a year, I did A1 & am pursuing A2 level, I learned a lot about German Language and the culture. Institute organises events like Das German Fest "Cooking German Food", Stammtisch "Group Discussions" with all other students from different batches, a nice learning experience. </p>
+               </th>
+               <th class="w3-center w3-padding-16">
+                  <h5>Yash Dhake</h5>
+                  <i class="star star-5"></i>
+                  <p class="w3-opacity">German - A2</p>
+                  <p>I am studying A2 level, the team of teachers is hardworking and do not give up until students have understood a topic completely. There is personal guidance, interactive learning and lot of events. I wish that LingoThoughts really "Unites the World"</p>
+               </th>
+               <th class="w3-center w3-padding-16">
+                  <h5>Nimish Iwale</h5>
+                  <i class="star star-5"></i>
+                  <p class="w3-opacity">German - B1</p>
+                  <p>Very good in terms of learning and interactive environment. </p>
+               </th>
+            </tr>
+            <tr>
+               <th class="w3-center w3-padding-16">
+                  <h5>Meet Payak </h5>
+                  <i class="star star-4"></i>
+                  <p class="w3-opacity">German - A1</p>
+                  <p>I am student at Ravet branch, and found this institute have a very nice way of teaching and nice environment as well. Teacher Kashimra has a good knowledge and communication skills. Its perfect place for German in Ravet or nigadi area.</p>
+               </th>
+               <th class="w3-center w3-padding-16">
+                  <h5>Ketki</h5>
+                  <i class="star star-5"></i>
+                  <p class="w3-opacity">German - B2</p>
+                  <p>Perfect environment to learn a language</p>
+               </th>
+               <th class="w3-center w3-padding-16">
+                  <h5>Ms. Apoorva Algudkar</h5>
+                  <i class="star star-5"></i>
+                  <p class="w3-opacity">German - B1, B2</p>
+                  <p>This has by far been my best experience. I had been with other Institutes before, but I've cleared my B1 only because of teaching methods in this institute and my learning experience with this institute is also very good. I've improved to a very great extent in German Language. I have continued for B2 here itself. . </p>
+               </th>
+            </tr>
+         </table>
+      </div>
+      <div class="w3-row-padding" style="margin:0 -16px">
+         <div class="w3-center w3-padding-64">
+            <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">RATINGS</span>
+         </div>
+      </div>
+      <div class="w3-row-padding" style="margin:0 -16px">
+         <table class="w3-table">
+            <colgroup>
+               <col width="20%"/>
+               <col width="20%"/>
+               <col width="20%"/>
+               <col width="20%"/>
+               <col width="20%"/>
+            </colgroup>
+            <tr >
+               <th class="w3-center w3-padding-16">Manish </br> <i class="star star-4"></i></th>
+               <th class="w3-center w3-padding-16">Karan Polkam </br> <i class="star star-4"></i></th>
+               <th class="w3-center w3-padding-16">Pranav Joshi </br> <i class="star star-5"></i></th>
+               <th class="w3-center w3-padding-16">Akshay Tavse </br> <i class="star star-5"></i></th>
+               <th class="w3-center w3-padding-16">Sophia Lobo </br> <i class="star star-4"></i></th>
+            </tr>
+            <tr>
+               <th class="w3-center w3-padding-16">Harshal </br> <i class="star star-5"></i></th>
+               <th class="w3-center w3-padding-16">Priyanka </br> <i class="star star-5"></i></th>
+               <th class="w3-center w3-padding-16">Sakshi Garg </br> <i class="star star-5"></i></th>
+               <th class="w3-center w3-padding-16">Aniket Badhe </br> <i class="star star-5"></i></th>
+               <th class="w3-center w3-padding-16">Ankush Kale </br> <i class="star star-5"></i></th>
+            </tr>
+            <tr >
+               <th class="w3-center w3-padding-16">Harish Padaki	 </br> <i class="star star-5"></i></th>
+               <th class="w3-center w3-padding-16">Bhushan </br> <i class="star star-5"></i></th>
+               <th class="w3-center w3-padding-16">Mr Yuvraj Gavande	 </br> <i class="star star-4"></i></th>
+               <th class="w3-center w3-padding-16">Ms Anuradha Phadnis	 </br> <i class="star star-5"></i></th>
+               <th class="w3-center w3-padding-16">Rohit</br> <i class="star star-5"></i></th>
+            </tr>
+         </table>
+      </div>
+      <!-- Footer -->
+      <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+         <h4>Follow Us</h4>
+         <a class="w3-btn-floating w3-teal" href="http://www.facebook.com/LingoThoughts"  target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a>
+       
+         <a class="w3-btn-floating w3-teal" href="https://plus.google.com/+Lingothoughts"  target="_blank" title="Google +"><i class="fa fa-google-plus"></i></a>
+      <!--   <a class="w3-btn-floating w3-teal" href="javascript:void(0)" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a>  <a class="w3-btn-floating w3-teal w3-hide-small" href="javascript:void(0)"  target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a> -->
+         <p>&#169; 2016 LingoThoughts Foreign Language Institute</p>
+         <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+            <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
+            <a class="w3-btn w3-theme" href="#myHeader"><span class="w3-xlarge">
+            <i class="fa fa-chevron-circle-up"></i></span></a>
+         </div>
+      </footer>
+   </body>
+</html>
